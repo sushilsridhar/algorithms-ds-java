@@ -1,8 +1,14 @@
 package sorting;
 
+/*
+    1. initialize the lowest element and it's index with first element's value and index.
+    2. find lowest element in array, save the element and index.
+    3. swap the lowest element with first element.
+    4. one element is sorted, increment the start index and continue with unsorted array.
+ */
 public class SelectionSort {
     public static void main(String[] args) {
-        int arr[] = {64, 25, 12, 22, 11};
+        int arr[] = {35, 23, 75, 34, 34};
 
         int startIndex = 0;
         int arrayLength = arr.length;
