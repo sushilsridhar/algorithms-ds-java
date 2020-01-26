@@ -7,7 +7,7 @@ package sorting;
     4. one element is sorted, increment the start index and continue with unsorted array.
 
     Time complexity : o(n * n)
-    Stablity: Need to be verified
+    Stablity: Needs to be verified
  */
 
 public class SelectionSort {
