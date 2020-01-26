@@ -5,7 +5,11 @@ package sorting;
     2. find lowest element in array, save the element and index.
     3. swap the lowest element with first element.
     4. one element is sorted, increment the start index and continue with unsorted array.
+
+    Time complexity : o(n * n)
+    Stablity: Need to be verified
  */
+
 public class SelectionSort {
     public static void main(String[] args) {
         int arr[] = {35, 23, 75, 34, 34};
@@ -18,10 +22,10 @@ public class SelectionSort {
 
         while(startIndex < iterationRequiredForSorting) {
 
-            int minElement = arr[startIndex];
+            int minElement = arr[startIndex]; /* STEP 1 */
             int minElementIndex = startIndex;
 
-            for(int i = startIndex + 1; i < arrayLength; i++) {
+            for(int i = startIndex + 1; i < arrayLength; i++) { /* STEP 2 */
                 if(minElement > arr[i]) {
                     minElement = arr[i];
                     minElementIndex = i;
@@ -30,11 +34,11 @@ public class SelectionSort {
             }
 
             if(isMinElementChanged) { /* Swap only if MinElement is identified */
-                arr[minElementIndex] = arr[startIndex];
+                arr[minElementIndex] = arr[startIndex]; /* STEP 3 */
                 arr[startIndex] = minElement;
                 isMinElementChanged = false;
             }
-            startIndex++;
+            startIndex++; /* STEP 4 */
         }
 
         for(int elementInArr : arr) {
