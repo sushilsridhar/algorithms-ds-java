@@ -41,8 +41,6 @@ public class SelectionSort {
             startIndex++; /* STEP 4 */
         }
 
-        for(int elementInArr : arr) {
-            System.out.println(elementInArr);
-        }
+        Utility.printArray(arr);
     }
 }

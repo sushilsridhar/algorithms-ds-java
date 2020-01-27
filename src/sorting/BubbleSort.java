@@ -41,8 +41,6 @@ public class BubbleSort {
             iterations++;
         }
 
-        for(int element: arr) {
-            System.out.println(element);
-        }
+        Utility.printArray(arr);
     }
 }
