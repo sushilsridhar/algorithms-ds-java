@@ -1,5 +1,8 @@
 package multiplication;
 
+/*
+ Need to revisit, doesn't work for all inputs
+ */
 public class Karatsuba_multiplication {
 
     public static void main(String[] args) {
@@ -16,6 +19,7 @@ public class Karatsuba_multiplication {
 
      private static int karasuba(int x, int y) {
 
+        System.out.println("numbers:"+ x +" "+y);
         if( x < 10 || y < 10)
             return x * y;
 
@@ -48,10 +52,12 @@ public class Karatsuba_multiplication {
 
         System.out.println("recursion--------------");
         int ac = karasuba(a, c);
-
+        System.out.println("ac: "+ac);
         int bd = karasuba(b, d);
+         System.out.println("bd: "+bd);
 
         int intermediate_step = karasuba((a+b),(c+d)); // ac + ad + bc + bd
+         System.out.println("intermediate_step: "+intermediate_step);
 
          /*
          *  intermediate step avoids one more recusive call
@@ -64,9 +70,16 @@ public class Karatsuba_multiplication {
          * */
 
         int ad_plus_bc = intermediate_step - bd - ac; // gives ad + bc
+         System.out.println("ad_plus_bc: "+ad_plus_bc);
 
         int n = (int) min_len;
+        System.out.println("n value: "+ n);
+        int n_divide_by_2 = n/2;
 
-        return (10 ^ (n*n) * ac + 10 ^ (n/2) * ad_plus_bc + bd);
+        int results = (int) (Math.pow(10, n) * ac + Math.pow(10, n_divide_by_2) * ad_plus_bc + bd);
+        //int results = (10 ^ (n*n) * ac + 10 ^ (n/2) * ad_plus_bc + bd);
+        System.out.println("FINAL RESULTS: "+results);
+
+        return results;
     }
 }
