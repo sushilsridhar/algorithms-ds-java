@@ -1,4 +1,4 @@
-package ds.array;
+package ds.arrays;
 
 /*
     D[0] = a[0]
