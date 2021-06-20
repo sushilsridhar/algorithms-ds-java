@@ -40,6 +40,11 @@ public class StaticArray {
         System.out.println(arr.getClass().getName());
         // - output [I , [ - means 1 dimensional, I - integer , class created at run time
 
+        System.out.println(arr.length); // length is 10, same as the capacity of array
+        for(int i=0; i<arr.length; i++) {
+            System.out.println(arr[i]); // prints 10 zeros
+        }
+
         StaticArray array = new StaticArray(5);
 
         for(int i=0; i<5; i++) {
