@@ -17,20 +17,45 @@ public class DynamicArray {
     private int length = 0;
     private int[] internalArray = new int[capacity];
 
+    public void checkCapacityAndIncreaseIfRequired() {
+        if(length+1 > capacity) {
+            int newCapacity = capacity + capacity;
+            int[] newArray = new int[newCapacity];
+            for(int i=0; i<length; i++) {
+                newArray[i] = internalArray[i];
+            }
+            internalArray = newArray;
+            capacity = newCapacity;
+        }
+    }
 
     public int get(int index) {
+        if (index >= length)
+            throw new IndexOutOfBoundsException("Index: "+index+", Size: "+length);
         return internalArray[index];
     }
 
     public void push(int element) {
+        checkCapacityAndIncreaseIfRequired();
         internalArray[length] = element;
         length++;
     }
 
     public void add(int index, int element) {
+
+        if (index > length || index < 0) {
+            throw new IndexOutOfBoundsException("Index: "+index+", Size: "+length);
+        }
+
+        if(index == length) {
+            push(element);
+            return;
+        }
+
+        checkCapacityAndIncreaseIfRequired();
         int[] newArray = new int[capacity];
 
-        for(int i=0,j=0; i<length; i++,j++) {
+        for(int i=0,j=0; i<length+1; i++,j++) {
             if(i == index) {
                 newArray[i] = element;
                 i++;
@@ -55,7 +80,11 @@ public class DynamicArray {
 
     public void remove(int index) {
 
-        if(index == length-1) {
+        if (index >= length) {
+            throw new IndexOutOfBoundsException("Index: "+index+", Size: "+length);
+        }
+
+        if(index+1 == length) {
             pop();
             return;
         }
@@ -77,7 +106,8 @@ public class DynamicArray {
         StringBuilder builder = new StringBuilder(); // TODO learn
 
         builder.append("[");
-        for(int i=0; i< dynamicArray.capacity; i++) {
+        // Use dynamicArray.capacity for debugging
+        for(int i=0; i< dynamicArray.length; i++) {
             builder.append(dynamicArray.get(i));
             builder.append(", ");
         }
@@ -87,11 +117,12 @@ public class DynamicArray {
     }
 
     public static void main(String[] args) {
+
         ArrayList<Integer> a = new ArrayList<>();
 
         DynamicArray dynamicArray = new DynamicArray();
 
-        System.out.println(dynamicArray.get(0));
+        //System.out.println(dynamicArray.get(0));
 
         dynamicArray.push(4);
         dynamicArray.push(45);
@@ -104,6 +135,19 @@ public class DynamicArray {
         dynamicArray.remove(0);
 
         dynamicArray.add(3, 99);
+
+        dynamicArray.push(100);
+        dynamicArray.push(101);
+        dynamicArray.push(102);
+        dynamicArray.push(103);
+        dynamicArray.push(104);
+        dynamicArray.push(105);
+
+        dynamicArray.remove(10);
+        dynamicArray.add(10, 106);
+
+        dynamicArray.remove(5);
+        dynamicArray.add(5, 1000);
 
         System.out.println(dynamicArray.toString(dynamicArray));
         System.out.println(dynamicArray.length);
