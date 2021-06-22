@@ -6,7 +6,7 @@ import java.util.ArrayList;
 *   ArrayList in Java
 *
 *   get(index)              - O(1)
-*   push(element)           - O(1)
+*   push(element)           - O(1) or O(n)
 *   add(index, element)     - O(n)
 *   pop                     - O(n)
 *   remove(index)           - O(n)

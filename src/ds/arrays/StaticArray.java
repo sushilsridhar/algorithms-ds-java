@@ -15,7 +15,13 @@ so a[n] would be equal to doing 0x00 + (n * sizeof(type)).
 Static arrays are built in languages features in C++ and Java,
 can not be implemented without using another data structure.
 
- */
+*   Built-in Java
+*
+*   lookup    - O(1)
+*   push      - O(1)
+*   insert    - O(n)
+*   delete    - O(n)
+*/
 public class StaticArray {
 
     public int length;

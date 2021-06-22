@@ -1,4 +1,4 @@
-package ds.arrays;
+package algo.arrays;
 
 /*
     D[0] = a[0]
