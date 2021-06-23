@@ -16,6 +16,29 @@ public class ReverseString {
         String reverseTwo = reverseUsingCharAt(input); // O(n)
         System.out.println(reverseTwo);
 
+        String reverseThree = reverseUsingArrayReverse(input); // O(n)
+        System.out.println(reverseThree);
+    }
+
+    private static String reverseUsingArrayReverse(String input) {
+
+        char[] chars = input.toCharArray(); // o(n)
+
+        int number_of_swaps_required = (chars.length)/2;
+
+        int last_index;
+        char temp;
+
+        for(int start_index = 0; start_index < number_of_swaps_required; start_index++) { // run n/2 times --> o(n)
+
+            last_index = chars.length -start_index -1;
+
+            temp = chars[start_index];
+            chars[start_index] = chars[last_index];
+            chars[last_index] = temp;
+        }
+
+        return String.copyValueOf(chars); // o(n)
     }
 
     private static String reverseUsingCharAt(String input) {
