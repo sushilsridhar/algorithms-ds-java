@@ -1,8 +1,17 @@
 package algo.strings;
 
 /*
+    CharSequence interface - top level interface
+    String, AbstractStringBuilder, StringBuilder, StringBuffer implements CharSequence
+    StringBuilder, StringBuffer extends AbstractStringBuilder
 
+    String is immutable
+    StringBuilder is mutable
+    StringBuffer is mutable and synchronized (thread safe)
 
+    String in built on top of char array
+    Any method that deals with array, internally uses
+    System.arraycopy(value, 0, result, 0, value.length); O(n), but faster because of native implementation (by JVM or C or C++)
  */
 public class ReverseString {
 
