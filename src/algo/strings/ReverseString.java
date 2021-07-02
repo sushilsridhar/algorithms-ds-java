@@ -9,9 +9,15 @@ package algo.strings;
     StringBuilder is mutable
     StringBuffer is mutable and synchronized (thread safe)
 
-    String in built on top of char array
+    String is built on top of char array
     Any method that deals with array, internally uses
     System.arraycopy(value, 0, result, 0, value.length); O(n), but faster because of native implementation (by JVM or C or C++)
+
+    ReverseString
+
+    reverseUsingCharArray       - O(n)
+    reverseUsingCharAt          - O(n)
+    reverseUsingArrayReverse    - O(n)
  */
 public class ReverseString {
 
