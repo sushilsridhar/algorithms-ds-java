@@ -55,12 +55,13 @@ public class String {
         return value[index];
     }
 
-    /*public boolean contains() {
+    public boolean contains() {
 
         for(int i=0; i<value.length; i++) {
-            if()
+
         }
-    }*/
+        return false;
+    }
 
 
 
