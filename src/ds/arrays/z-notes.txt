@@ -1,0 +1,5 @@
+To solve arrays,
+
+1) use HashSet or HashMap
+2) two pointer approach, where inserting into same array (in-place questions)
+   one index for iterating, other for tracking the lastNonZeroElementIndex (or any requirement)
