@@ -1,0 +1,3 @@
+Dynamic programming is form of optimization to code,
+
+by remembering the previous results in some form of cache.
