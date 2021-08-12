@@ -1,3 +1,6 @@
 Dynamic programming is form of optimization to code,
+by remembering the previous results in some form of cache. (Memoization)
 
-by remembering the previous results in some form of cache.
+We save the results in cache and check if what we want is there in cache before another operation.
+
+Dynamic Programming = Divide and conquer + Memoization
