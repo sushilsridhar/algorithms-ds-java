@@ -17,9 +17,15 @@ public class ReverseArray {
         for(int start_index = 0; start_index< number_of_swaps_required; start_index++) {
             int last_index = arr.length -start_index -1;
 
-            int temp = arr[start_index];
+            /*int temp = arr[start_index];
             arr[start_index] = arr[last_index];
-            arr[last_index] = temp;
+            arr[last_index] = temp;*/
+
+            // swap without extra variable
+
+            arr[start_index] = arr[start_index] ^ arr[last_index]; // a = a ^ b
+            arr[last_index] = arr[start_index] ^ arr[last_index];  // b = a ^ b
+            arr[start_index] = arr[start_index] ^ arr[last_index]; // a = a ^ b
         }
 
         for(int i : arr) {
