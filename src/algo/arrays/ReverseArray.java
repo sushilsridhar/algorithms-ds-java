@@ -12,6 +12,7 @@ public class ReverseArray {
 
         int arr[] = {1, 2, 3, 4, 5, 6};
 
+        // IDEA 1
         int number_of_swaps_required = (arr.length)/2;
 
         for(int start_index = 0; start_index< number_of_swaps_required; start_index++) {
@@ -30,6 +31,23 @@ public class ReverseArray {
 
         for(int i : arr) {
             System.out.println(i);
+        }
+
+        // IDEA 2
+        int arr2[] = {1, 2, 3, 4, 5, 6};
+        int i=0,j=arr.length-1;
+
+        while(i<j) {
+            int temp = arr2[i];
+            arr2[i] = arr2[j];
+            arr2[j] = temp;
+
+            i++;
+            j--;
+        }
+
+        for(int k : arr2) {
+            System.out.println(k);
         }
     }
 }
