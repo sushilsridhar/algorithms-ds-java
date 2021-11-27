@@ -3,3 +3,11 @@ To solve arrays,
 1) use HashSet or HashMap
 2) two pointer approach, where inserting into same array (in-place questions)
    one index for iterating, other for tracking the lastNonZeroElementIndex (or any requirement)
+
+
+Techniques
+
+1)Adding contribution of each and every element - finding the number of occurrence of one element in all subarrays, and adding them individually
+2)Carry forward - carring the previous subarray sum to new subarray
+3)Sliding window - for the new subarray, subtract the previous element to startindex and add the element of new end index
+4)
