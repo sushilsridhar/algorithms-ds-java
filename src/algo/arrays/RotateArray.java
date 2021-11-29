@@ -23,6 +23,10 @@ public class RotateArray {
         int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         efficentRightRotation(a, 5);
         printArray(a);
+
+        int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        efficentLeftRotation(b, 4);
+        printArray(b);
     }
 
     // Time complexity: n/2 + k/2 + n/2-k/2 - > 2n/2 -> O(n)
@@ -33,6 +37,17 @@ public class RotateArray {
         reverse(a, 0, n-1); // O(n/2)
         reverse(a,0, k-1);  // O(k/2)
         reverse(a, k, n-1);    // -> (n-1-k-1)/2 -> O((n-k)/2)
+
+    }
+
+    // Time complexity: n/2 + (n-1-k)/2 + (k-1)/2 - > 2n/2 -> O(n)
+    private static void efficentLeftRotation(int[] b, int numberOfRotation) {
+        int n = b.length;
+        int k = numberOfRotation%n; // this is must, n = { 1, 2, 3}; 4shifts to this array is same as 1 shift
+
+        reverse(b, 0, n-1); // O(n/2)
+        reverse(b,0, n-1-k);  // (n-1-k)/2
+        reverse(b, n-k, n-1);  // n-1-n+k -> (k-1)/2
 
     }
 
