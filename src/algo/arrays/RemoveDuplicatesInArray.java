@@ -1,6 +1,7 @@
 package algo.arrays;
 
 /*
+    Remove duplicates from sorted array
     Two pointer approach:
 
     {0, 1, 1, 1, 2, 2, 3, 3, 4}

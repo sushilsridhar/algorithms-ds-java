@@ -5,9 +5,10 @@ To solve arrays,
    one index for iterating, other for tracking the lastNonZeroElementIndex (or any requirement)
 
 
-Techniques
+Array Techniques
 
 1)Adding contribution of each and every element - finding the number of occurrence of one element in all subarrays, and adding them individually
 2)Carry forward - carring the previous subarray sum to new subarray
 3)Sliding window - for the new subarray, subtract the previous element to startindex and add the element of new end index
-4)
+4)Two pointer - for removing duplicate element, using the same input array itself for processing, without extra space
+5)Prefix Sum -
