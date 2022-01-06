@@ -2,14 +2,21 @@ package algo.arrays;
 
 /*
 
-    Right rotation
+    Right rotation - move elements from right to left
     7 8 9 10 1 2 3 4 5 6
 
-     int k = numberOfRotation%n; // this is must, n = { 1, 2, 3}; 4shifts to this array is same as 1 shift
+    int k = numberOfRotation%n; // this is must, n = { 1, 2, 3}; 4shifts to this array is same as 1 shift
 
     1 - reverse the whole array - 10 9 8 7 6 5 4 3 2 1
     2 - reverse the array from 0 to  number of shifts - 1, 7 8 9 10 6 5 4 3 2 1
     3 - reverse the array from number of shifts to array length -1 , 7 8 9 10 1 2 3 4 5 6
+
+
+    Left rotation - move elements from left to right
+    A = [1, 2, 3, 4, 5] , k = 2
+
+    3 4 5 1 2
+
  */
 public class RotateArray {
     public static void main(String[] args) {
