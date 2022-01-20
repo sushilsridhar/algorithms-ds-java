@@ -7,6 +7,8 @@ import java.util.Arrays;
     String, AbstractStringBuilder, StringBuilder, StringBuffer implements CharSequence
     StringBuilder, StringBuffer extends AbstractStringBuilder
 
+    String is ordered sequence of characters
+
     String is immutable
     StringBuilder is mutable
     StringBuffer is mutable and synchronized (thread safe)
@@ -82,7 +84,7 @@ public class String {
         char[] input = {'J', 'a', 'm', 'e', 's', 'B', 'o', 'n', 'd'};
 
         String newString = new String(input);
-
+        //c.startsWith();
         //c.contains()
        /* c.toLowerCase(Locale.ROOT);
         c.toUpperCase();

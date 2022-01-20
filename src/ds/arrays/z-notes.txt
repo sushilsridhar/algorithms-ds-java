@@ -1,3 +1,20 @@
+Arrays
+pros
+- easy access
+- mainly used because O(1) random access, reason - arrays stores elements in contiguous memory location
+
+cons
+- fixed size
+
+Dynamic Arrays
+pros
+- Arrays size can be dynamic
+- mainly used because O(1) random access, reason - arrays stores elements in contiguous memory location
+
+cons
+- if memory is available, but it is not contiguous, that memory is not used hence affecting space efficiency
+
+
 To solve arrays,
 
 1) use HashSet or HashMap
