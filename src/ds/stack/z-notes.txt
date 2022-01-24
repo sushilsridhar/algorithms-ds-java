@@ -1,0 +1,12 @@
+Stack is abstract data type,
+
+abstract - meaning implementation details is hidden or not considered
+
+2 major operation
+push and pop
+
+insertion and extraction done at one end only
+last in first out
+
+real life examples :  web browser back and forward, function call stack, undo redo in notes
+
