@@ -10,3 +10,9 @@ cons
 Note: do not update the head of the linkedList, copy it to another variable and use
 head variable will always have the reference of starting node of linkedList,
 another variable can be used to traverse through the node reference of linkedList
+
+
+Insertion at front - O(1)
+Insertion at tail  - O(1), with tail pointer
+Delete at Front    - O(1)
+Delete at Tail     - O(n), even with tail pointer

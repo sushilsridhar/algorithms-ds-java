@@ -1,0 +1,9 @@
+First in First out
+
+queue , abstract data type
+
+two operation
+- enqueue
+- dequeue
+
+real world examples, Kafka, Rabbit MQ, scheduling algorithm(acquiring locking on memory)

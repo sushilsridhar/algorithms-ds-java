@@ -14,6 +14,11 @@ pros
 cons
 - if memory is available, but it is not contiguous, that memory is not used hence affecting space efficiency
 
+Vectors
+- legacy class created before Arraylist
+- same as arraylists, but synchronised
+- A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.
+
 
 To solve arrays,
 
