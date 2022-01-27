@@ -1,0 +1,21 @@
+Trees
+
+- have hierarchy
+- all other data structures are linear, tree have hierarchy
+
+Programming paradigm - recursion
+observation - left sub tree and right sub tree are binary trees
+
+Types
+
+- Binary tree, can have 0,1,2 children , maximum two children
+
+Traversal rule:
+- Visit left sub tree, before right sub tree
+
+1. root -> left -> right , called pre order traversal  (root first)
+2. left -> root -> right , called in order traversal   (root middle)
+3. left -> right -> root , called post order traversal (root last)
+
+
+real world examples: computer folder directory, browser DOM
