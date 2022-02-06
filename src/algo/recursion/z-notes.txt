@@ -1,0 +1,26 @@
+recursion
+
+function calling itself
+is a technique of solving a problem using smaller instance of the same given problem
+
+smaller instance means sub problem
+
+observations
+- size keeps decreasing
+
+
+3 steps for writing recursive code
+
+- Assume that your code will work
+- Main logic -> solve bigger problem using smaller sub problem (recursive equation)
+- Termination/ Base condition -> decide this, when code should stop
+
+
+should we consider the stack space in space complexity for recursion?
+- YES
+
+recursive code will always have space complexity compared to other approaches, check ImplementPowFunction in problem-solving
+
+space complexity:
+maximum size of the stack at any point of time
+max height of the recursion tree
