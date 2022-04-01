@@ -1,0 +1,10 @@
+
+Sorting
+ - arrangement of data, based on a property, in increasing or decreasing order
+
+Stable sort
+ - if property of comparison for two elements are same, maintain the original order, the first element in the array will be first and second will be second
+
+Selection sort
+ - find the max element in the array, swap and put it at the end of the array, now array contains, sorted and unsorted parts, repeat for unsorted part of array
+
