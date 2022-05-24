@@ -2,6 +2,23 @@ package ds.list;
 
 /*
     Singly Linked list implementation
+
+    Time complexity
+
+    add()         - O(n)
+    addFirst()    - O(1)
+    addLast()     - O(n) or O(1) (with tail pointer)
+    add(k, data)  - O(k)
+
+    get(k)        - O(k)
+    getFirst()    - O(1)
+    getLast()     - O(n) or O(1) (with tail pointer)
+
+    remove(k)     - O(k)
+    removeFirst() - O(1)
+    removeLast()  - O(n)
+
+    set(k, data)  - O(k)
  */
 public class SinglyLinkedList {
 

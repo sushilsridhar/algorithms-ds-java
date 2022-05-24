@@ -4,6 +4,24 @@ import java.util.NoSuchElementException;
 
 /*
     Java linked list is implemented using Doubly Linked List
+
+    Time complexity
+
+    add()         - O(1)
+    addFirst()    - O(1)
+    addLast()     - O(1)
+    add(k, data)  - O(k)
+
+    get(k)        - O(k)
+    getFirst()    - O(1)
+    getLast()     - O(1)
+
+    remove(k)     - O(k)
+    removeFirst() - O(1)
+    removeLast()  - O(1)
+
+    set(k, data)  - O(k)
+
  */
 public class LinkedList<E> {
 
