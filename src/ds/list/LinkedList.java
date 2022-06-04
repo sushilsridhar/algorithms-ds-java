@@ -22,6 +22,22 @@ import java.util.NoSuchElementException;
 
     set(k, data)  - O(k)
 
+    Note:
+
+    Node class is made static because, the methods inside the Node class does not require access to fields of LinkedList class,
+    so by making it static, access to fields of LinkedList class is restricted for Node class
+
+    private int size = 0;
+
+    private static class Node<E> {
+        E data;
+        Node<E> prev;
+        Node<E> next;
+
+        void get() {
+            System.out.println(size); // Throws error
+        }
+    }
  */
 public class LinkedList<E> {
 

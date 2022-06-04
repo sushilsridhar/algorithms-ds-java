@@ -11,6 +11,13 @@ import java.util.ArrayList;
 
     push, pop
     Time complexity: O(1)
+
+    tc is O(n):
+    push is O(n) when array has to resized to fit extra elements
+
+    Inefficient space usage:
+    space usage is not efficient
+    even when we pop, the array space is not released
  */
 public class StackUsingDynamicArray {
 

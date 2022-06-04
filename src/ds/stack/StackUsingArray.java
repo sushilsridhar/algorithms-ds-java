@@ -5,6 +5,12 @@ package ds.stack;
 
     push, pop
     Time complexity: O(1)
+
+    Space is a constraint,
+
+    Inefficient space usage:
+    space usage is not efficient
+    even when we pop, the array space is not released
  */
 public class StackUsingArray {
     static int size = 100;
