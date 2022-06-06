@@ -7,3 +7,5 @@ two operation
 - dequeue
 
 real world examples, Kafka, Rabbit MQ, scheduling algorithm(acquiring locking on memory)
+
+TODO queues
