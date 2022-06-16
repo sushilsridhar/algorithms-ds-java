@@ -1,5 +1,7 @@
 package ds.list;
 
+import ds.queue.Deque;
+
 import java.util.NoSuchElementException;
 
 /*
@@ -39,7 +41,7 @@ import java.util.NoSuchElementException;
         }
     }
  */
-public class LinkedList<E> {
+public class LinkedList<E> implements Deque<E> {
 
     private int size = 0;
 
@@ -60,13 +62,36 @@ public class LinkedList<E> {
 
     // --------- PUBLIC METHODS --------- //
 
-    public int size() {
-        return size;
-    }
+    /**  ---------  COMMON TO LINKED LIST AND QUEUE   --------- **/
 
-    public boolean add(E e) {
+    @Override
+    public boolean add(E e) {   // add to last
         linkToLast(e);
         return true;
+    }
+
+    // --------------------------------------------- //
+
+    /**  ---------  QUEUE IMPLEMENTATION   --------- **/
+
+    @Override
+    public E poll() {   // remove from head
+        if (first != null)
+            return unlinkFirst();
+        return null;
+    }
+
+    @Override
+    public E peek() {
+        if(first != null)
+            return first.data;
+        return null;
+    }
+
+    // --------------------------------------------- //
+
+    public int size() {
+        return size;
     }
 
     public void addFirst(E e) {
@@ -111,17 +136,9 @@ public class LinkedList<E> {
     }
 
     public E removeFirst() {
-        E element = first.data;
-        Node<E> next = first.next;
-        first.data = null;
-        first.next = null; // help GC
-        first = next;
-        if (next == null)
-            last = null;
-        else
-            next.prev = null;
-        size--;
-        return element;
+        if (first == null)
+            throw new NoSuchElementException();
+        return unlinkFirst();
     }
 
     public E removeLast() {
@@ -235,5 +252,19 @@ public class LinkedList<E> {
 
         size--;
         return nodeAtIndex.data;
+    }
+
+    private E unlinkFirst() {
+        E element = first.data;
+        Node<E> next = first.next;
+        first.data = null;
+        first.next = null; // help GC
+        first = next;
+        if (next == null)
+            last = null;
+        else
+            next.prev = null;
+        size--;
+        return element;
     }
 }
