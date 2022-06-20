@@ -142,17 +142,9 @@ public class LinkedList<E> implements Deque<E> {
     }
 
     public E removeLast() {
-        E element = last.data;
-        Node<E> prev = last.prev;
-        last.data = null;
-        last.next = null; // help GC
-        last = prev;
-        if (prev == null)
-            first = null;
-        else
-            prev.next = null;
-        size--;
-        return element;
+        if(last == null)
+            throw new NoSuchElementException();
+        return unlinkLast();
     }
 
     public E set(int index, E element) {
@@ -264,6 +256,20 @@ public class LinkedList<E> implements Deque<E> {
             last = null;
         else
             next.prev = null;
+        size--;
+        return element;
+    }
+
+    private E unlinkLast() {
+        E element = last.data;
+        Node<E> prev = last.prev;
+        last.data = null;
+        last.next = null; // help GC
+        last = prev;
+        if (prev == null)
+            first = null;
+        else
+            prev.next = null;
         size--;
         return element;
     }

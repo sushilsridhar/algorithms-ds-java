@@ -12,7 +12,7 @@ package ds.queue;
     dequeue -  Delete at Front    - O(1)
                Delete at Tail     - O(n), even with tail pointer
  */
-public class QueueUsingLinkedList {
+public class QueueUsingSinglyLinkedList {
 
     static class Node {
         int data;
