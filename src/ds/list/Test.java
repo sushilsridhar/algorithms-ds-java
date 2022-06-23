@@ -1,5 +1,8 @@
 package ds.list;
 
+/*
+    Test Doubly linked list implementation methods in LinkedList class
+ */
 public class Test {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package ds.list;
 
-import ds.queue.Deque;
+import ds.interfaces.Deque;
 
 import java.util.NoSuchElementException;
 
@@ -70,9 +70,9 @@ public class LinkedList<E> implements Deque<E> {
         return true;
     }
 
-    // --------------------------------------------- //
+    // -------------------------------------------------------- //
 
-    /**  ---------  QUEUE IMPLEMENTATION   --------- **/
+    /**  ---------  QUEUE AND STACK IMPLEMENTATION   --------- **/
 
     @Override
     public E poll() {   // remove from head
@@ -86,6 +86,16 @@ public class LinkedList<E> implements Deque<E> {
         if(first != null)
             return first.data;
         return null;
+    }
+
+    @Override
+    public void push(E e) {
+        addFirst(e);
+    }
+
+    @Override
+    public E pop() {   // remove from head
+        return removeFirst();
     }
 
     // --------------------------------------------- //

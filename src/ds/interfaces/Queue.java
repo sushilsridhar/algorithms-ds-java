@@ -1,4 +1,4 @@
-package ds.queue;
+package ds.interfaces;
 
 /*
     Time complexity
@@ -15,4 +15,8 @@ public interface Queue<E> {
 
     E peek();
 
+
+
+
+    int size();
 }

@@ -15,7 +15,7 @@ package ds.stack;
     size - O(1)
 
  */
-public class Stack<E> {
+public class StackUsingSinglyLinkedList<E> {
 
     private Node<E> head;
     private int size = 0;

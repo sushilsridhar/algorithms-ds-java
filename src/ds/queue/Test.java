@@ -1,7 +1,11 @@
 package ds.queue;
 
+import ds.interfaces.Queue;
 import ds.list.LinkedList;
 
+/*
+    Test Queue implementation methods in LinkedList class
+ */
 public class Test {
 
     public static void main(String[] args) {

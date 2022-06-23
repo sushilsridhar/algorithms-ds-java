@@ -1,16 +1,10 @@
 package ds.stack;
 
-import ds.interfaces.Deque;
-import ds.list.LinkedList;
-
-/*
-    Test Stack implementation methods in LinkedList class
- */
-public class Test {
+public class TestStackUsingSinglyLinkedList {
 
     public static void main(String[] args) {
 
-        Deque<Integer> stack = new LinkedList<>();
+        StackUsingSinglyLinkedList<Integer> stack = new StackUsingSinglyLinkedList<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);

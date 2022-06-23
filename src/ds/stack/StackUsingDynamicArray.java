@@ -3,6 +3,8 @@ package ds.stack;
 import java.util.ArrayList;
 
 /*
+    Default implementation of Stack class in Java was done by using Vector (dynamic array)
+
     Stack implementation using Dynamic Array
 
     - No restrictions on size
