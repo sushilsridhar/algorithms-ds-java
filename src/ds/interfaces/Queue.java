@@ -7,7 +7,7 @@ package ds.interfaces;
     poll - O(1)
     peek - O(1)
  */
-public interface Queue<E> {
+public interface Queue<E> extends Collection<E> {
 
     boolean add(E e);
 
@@ -15,8 +15,4 @@ public interface Queue<E> {
 
     E peek();
 
-
-
-
-    int size();
 }

@@ -1,6 +1,7 @@
 package ds.list;
 
 import ds.interfaces.Deque;
+import ds.interfaces.List;
 
 import java.util.NoSuchElementException;
 
@@ -41,7 +42,7 @@ import java.util.NoSuchElementException;
         }
     }
  */
-public class LinkedList<E> implements Deque<E> {
+public class LinkedList<E> implements List<E>, Deque<E> {
 
     private int size = 0;
 
@@ -99,6 +100,10 @@ public class LinkedList<E> implements Deque<E> {
     }
 
     // --------------------------------------------- //
+
+    public boolean isEmpty() {
+        return size() == 0;
+    }
 
     public int size() {
         return size;
