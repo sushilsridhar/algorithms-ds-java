@@ -1,0 +1,24 @@
+
+
+HashMap does not preserve the order of the elements --> unordered map
+there is ordered map also
+
+HashSet
+- stores only unique elements
+- O(1) average time complexity
+
+all are O(1) Average time complexity
+set.contains(k)
+set.add(k)
+set.remove(k)
+
+https://www.geeksforgeeks.org/iterate-map-java/
+
+There are generally five ways of iterating over a Map in Java. In this article, we will discuss all of them and also look at their advantages and disadvantages.
+First of all, we cannot iterate a Map directly using iterators, because Map are not Collection. Also before going further, you must know a little-bit about Map.Entry<K, V> interface.
+Since all maps in Java implement Map interface, following techniques will work for any map implementation (HashMap, TreeMap, LinkedHashMap, Hashtable, etc.)
+
+
+https://github.com/scaleracademy/Language-Module-June-2022/tree/main/java/03/collections
+
+add set and map to github
